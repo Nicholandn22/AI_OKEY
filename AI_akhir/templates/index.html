@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Water Quality Predictor</title>
+    <style>
+      body {
+        background-color: lightblue;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        color: lightsalmon;
+        margin-bottom: 20px;
+      }
+
+      form {
+        margin-bottom: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      table, th, td {
+        border: 1px solid #ddd;
+      }
+
+      th, td {
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      a {
+        text-decoration: none;
+        color: #3498db;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        max-width: 800px;
+        width: 100%;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      h4{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <center>
+        <h1>AI Water Quality Predictor</h1>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+          <input type="file" name="file" accept=".csv" />
+          <button type="submit">Predict</button>
+          <h4>Note : File harus berbentuk .csv dan memiliki parameter (Temperatur	TDS	TSS	pH	BOD	COD	DO	CurahHujan)</h4>
+        </form>
+        {% if error %}
+        <p>Error: {{ error }}</p>
+        {% endif %} {% if prediction_table %}
+        <h2>Prediction Results</h2>
+        {{ prediction_table|safe }} {% if output_filename %}
+        <p><a href="{{ output_filename }}" download>Download Predictions</a></p>
+        {% endif %} {% endif %}
+      </center>
+    </div>
+  </body>
+</html>

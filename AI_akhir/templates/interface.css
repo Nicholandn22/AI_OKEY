@@ -1,0 +1,12 @@
+body {
+  /* background-image: url(bg.avif); */
+  background-color: aqua;
+  /* background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0px; */
+}
+
+h1{
+  color: blue;
+}
