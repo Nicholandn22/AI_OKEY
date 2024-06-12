@@ -8,6 +8,8 @@ Nama anggota kelompok :
 2. Milka Putri Fibiona / 71220851
 3. Nicholas Dwinata / 71220869
 
+Progam pengukuran kualitas air ini berguna untuk membantu menentukan apakah kualitas air tersebut bersih atau tidak bersih berdasarkan pH (Potensi Hidrogen), BOD (Biological Oxygen Demand), COD (Chemical Oxygen Demand), TDS(Total Dissolved Solids), TSS(Total Suspended Solids), dan DO (Dissolved Oxygen)
+
 ![image](https://github.com/Nicholandn22/AI_OKEY/assets/117884361/297491cb-7e06-4fd7-987b-a4a6cfad13c1)
 
 
